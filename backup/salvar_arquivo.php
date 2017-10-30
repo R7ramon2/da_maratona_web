@@ -6,7 +6,6 @@ $arq = "backup_diario/backup_".$data.".json";
 $dados_json = $_POST['json'];
 
 $fp = fopen($arq, "a");
-echo $fp;
 $escreve = fwrite($fp, $dados_json);
 fclose($fp);
 
@@ -32,7 +31,7 @@ $mail->FromName ='Ramon Ranieri';//nome do remetente
 $mail->Body = utf8_decode("Backup diário banco de dados Firebase. <br /> DA-Maratona");
 $mail->AddAddress('r.ranieri@netmake.com.br');//email do destinatario
 $mail->AddAddress('unicap.dacomp@gmail.com');
-$mail->AddAttachment($arq);//anexa o arquivo
+$mail->AddAttachment("backup_diario/".$arq);//anexa o arquivo
 
 $verifica = $mail->Send();//envia o email
 
