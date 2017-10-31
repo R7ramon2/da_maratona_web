@@ -2,7 +2,7 @@ $(document).ready(function () {
     $("#matricula").mask("000000000-0");
     $("#senha").mask("000000");
 
-    $("#inserir").click(function () {
+    $("#login").click(function () {
         matricula = $("#matricula").val();
         senha = $("#senha").val();
         senhaCript = senha.split("");
@@ -39,7 +39,7 @@ $(document).ready(function () {
                 dbRefSenha.on('value', snap => {
                     var dadoSenha = snap.val();
                 if (senha == dadoSenha && dadoSenha != null){
-                    location.href = "alterar_senha.html";
+                    location.href = "usuario_logado.html";
                 }
                 else{
                     alert("Senha incorreta!");
