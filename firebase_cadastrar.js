@@ -64,9 +64,9 @@ $(document).ready(function () {
         else {
             senha = senhaCript.join("");
             const dbRef = firebase.database().ref().child('Alunos/' + matricula + '/matricula');
-            dbRef.on('value', snap => {
-                var dados = snap.val();
-                if (matricula != dados) {
+            dbRef.once('value', snap => {
+                var dadoMatricula = snap.val();
+                if (matricula != dadoMatricula) {
                     firebase.database().ref('Alunos/' + matricula).set({
                         nome: nome,
                         matricula: matricula,

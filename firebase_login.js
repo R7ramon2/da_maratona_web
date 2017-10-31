@@ -31,26 +31,35 @@ $(document).ready(function () {
         }
         else {
             senha = senhaCript.join("");
-            var dbRefMat = firebase.database().ref().child('Alunos/' + matricula + '/matricula');
-            var dbRefSenha = firebase.database().ref().child('Alunos/' + matricula + '/senha');
+            const dbRefMat = firebase.database().ref().child('Alunos/' + matricula + '/matricula');
+            const dbRefSenha = firebase.database().ref().child('Alunos/' + matricula + '/senha');
+            const isAdmin = firebase.database().ref().child('Alunos/' + matricula + '/admin');
             dbRefMat.once('value', snap => {
                 var dadoMatricula = snap.val();
             if (dadoMatricula == matricula) {
-                dbRefSenha.on('value', snap => {
+                dbRefSenha.once('value', snap => {
                     var dadoSenha = snap.val();
-                if (senha == dadoSenha && dadoSenha != null){
-                    location.href = "usuario_logado.html";
+                if (senha == dadoSenha && dadoSenha != null) {
+                    isAdmin.once('value', snap => {
+                        var dadoAdmin = snap.val();
+                        if (dadoAdmin == '0') {
+                            location.href = "usuario_logado.html";
+                        }
+                        else{
+                            location.href = "admin_logado.html";
+                        }
+                    });
                 }
                 else{
                     alert("Senha incorreta!");
-                    document.getElementById('senha').value = '';
+                    document.getElementById("senha").value = '';
                     document.getElementById("senha").focus();
                 }
                 });
             }
             else {
                 alert("Matrícula incorreta!");
-                document.getElementById('matricula').value = '';
+                document.getElementById("matricula").value = '';
                 document.getElementById("matricula").focus();
             }
         });

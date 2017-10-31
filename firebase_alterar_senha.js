@@ -47,7 +47,8 @@ $(document).ready(function () {
         }
         else {
             senha = senhaCript.join("");
-            firebase.database().ref().child('Alunos/' + matricula + '/matricula').on('value', snap => {
+            const dbRefMat = firebase.database().ref().child('Alunos/' + matricula + '/matricula');
+            dbRefMat.once('value', snap => {
                 var dados = snap.val();
             if (dados != null) {
                 firebase.database().ref().child('Alunos/' + matricula + '/senha').set(senha);
