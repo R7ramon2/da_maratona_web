@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $("#matricula").mask("000000000-0");
     $("#periodo").mask("00");
+    $("#senha").mask("000000");
 
 
     $("#adm").click(function () {

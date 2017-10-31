@@ -1,5 +1,7 @@
 $(document).ready(function () {
     $("#matricula").mask("000000000-0");
+    $("#senha").mask("000000");
+    $("#senha_confirmacao").mask("000000");
 
     $("#inserir").click(function () {
         matricula = $("#matricula").val();
