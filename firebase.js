@@ -63,34 +63,34 @@ $(document).ready(function () {
         }
         else {
             senha = senhaCript.join("");
-            firebase.database().ref().child('Alunos/' + matricula + '/matricula').on('value', snap => {
-                var dados = JSON.stringify(snap.val());
-            if (matricula != dados) {
-                firebase.database().ref('Alunos/' + matricula).set({
-                    nome: nome,
-                    matricula: matricula,
-                    senha: senha,
-                    periodo: periodo,
-                    admin: adm,
-                    faltas: faltas,
-                    imagem: imagem,
-                    pontuacao: pontuacao,
-                    primeiroNome: primeiro_nome,
-                    ultimoNome: ultimo_nome
-                });
-                alert("Aluno cadastrado com sucesso!");
-                document.getElementById('nome_completo').value = '';
-                document.getElementById('matricula').value = '';
-                document.getElementById('senha').value = '';
-                document.getElementById('periodo').value = '';
-                document.getElementById('adm').checked = false;
-            }
-            else {
-                alert("Matrícula já cadastrada!");
-                document.getElementById('matricula').value = '';
-            }
-        });
+            const dbRef = firebase.database().ref().child('Alunos/' + matricula + '/matricula');
+            dbRef.on('value', snap => {
+                var dados = snap.val();
+                if (matricula != dados) {
+                    firebase.database().ref('Alunos/' + matricula).set({
+                        nome: nome,
+                        matricula: matricula,
+                        senha: senha,
+                        periodo: periodo,
+                        admin: adm,
+                        faltas: faltas,
+                        imagem: imagem,
+                        pontuacao: pontuacao,
+                        primeiroNome: primeiro_nome,
+                        ultimoNome: ultimo_nome
+                    });
+                    alert("Aluno cadastrado com sucesso!");
+                    document.getElementById('nome_completo').value = '';
+                    document.getElementById('matricula').value = '';
+                    document.getElementById('senha').value = '';
+                    document.getElementById('periodo').value = '';
+                    document.getElementById('adm').checked = false;
+                }
+                else {
+                    alert("Matrícula já cadastrada!");
+                    document.getElementById('matricula').value = '';
+                }
+            });
         }
     });
 });
-
