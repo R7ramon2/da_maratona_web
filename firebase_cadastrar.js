@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 
     $("#adm").click(function () {
-        if ($(this).val() == "0") {
+        if ($(this).val() === "0") {
             $(this).val("1");
         }
         else {
@@ -36,12 +36,12 @@ $(document).ready(function () {
         senhaCript[5] *= 97 * 9 * 2;
 
 
-        if (nome == "") {
+        if (nome === "") {
             alert("Nome obrigatório!");
             document.getElementById("nome_completo").focus();
             // $("#nome_completo").focus();
         }
-        else if (matricula == "") {
+        else if (matricula === "") {
             alert("Matrícula obrigatória!");
             document.getElementById("matricula").focus();
             // $("#matricula").focus();
@@ -51,7 +51,7 @@ $(document).ready(function () {
             document.getElementById("matricula").focus();
             // $("matricula").focus();
         }
-        else if (senha == "") {
+        else if (senha === "") {
             alert("Senha obrigatória!");
             document.getElementById("senha").focus();
             // $("senha").focus();
@@ -65,8 +65,8 @@ $(document).ready(function () {
             senha = senhaCript.join("");
             const dbRef = firebase.database().ref().child('Alunos/' + matricula + '/matricula');
             dbRef.once('value', snap => {
-                var dadoMatricula = snap.val();
-                if (matricula != dadoMatricula) {
+                const dadoMatricula = snap.val();
+                if (matricula !== dadoMatricula) {
                     firebase.database().ref('Alunos/' + matricula).set({
                         nome: nome,
                         matricula: matricula,

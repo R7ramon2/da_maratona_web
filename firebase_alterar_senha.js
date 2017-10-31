@@ -15,7 +15,7 @@ $(document).ready(function () {
         senhaCript[4] *= 19 * 12 * 7 * 3;
         senhaCript[5] *= 97 * 9 * 2;
 
-        if (matricula == "") {
+        if (matricula === "") {
             alert("Matrícula obrigatória!");
             document.getElementById("matricula").focus();
         }
@@ -23,7 +23,7 @@ $(document).ready(function () {
             alert("Matrícula incompleta!");
             document.getElementById("matricula").focus();
         }
-        else if (senha == "") {
+        else if (senha === "") {
             alert("Senha obrigatória!");
             document.getElementById("senha").focus();
         }
@@ -31,7 +31,7 @@ $(document).ready(function () {
             alert("Senha incompleta!");
             document.getElementById("senha").focus();
         }
-        else if (senhaConfirmacao == "") {
+        else if (senhaConfirmacao === "") {
             alert("Senha incompleta!");
             document.getElementById("senha").focus();
         }
@@ -39,7 +39,7 @@ $(document).ready(function () {
             alert("Senha incompleta!");
             document.getElementById("senha").focus();
         }
-        else if (senha != senhaConfirmacao){
+        else if (senha !== senhaConfirmacao){
             alert("Senhas diferentes!");
             document.getElementById('senha').value = '';
             document.getElementById('senha_confirmacao').value = '';
@@ -49,8 +49,8 @@ $(document).ready(function () {
             senha = senhaCript.join("");
             const dbRefMat = firebase.database().ref().child('Alunos/' + matricula + '/matricula');
             dbRefMat.once('value', snap => {
-                var dados = snap.val();
-            if (dados != null) {
+                const dados = snap.val();
+            if (dados !== null) {
                 firebase.database().ref().child('Alunos/' + matricula + '/senha').set(senha);
                 alert("Senha alterada com sucesso!");
                 document.getElementById('matricula').value = '';

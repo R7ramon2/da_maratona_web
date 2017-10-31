@@ -13,7 +13,7 @@ $(document).ready(function () {
         senhaCript[4] *= 19 * 12 * 7 * 3;
         senhaCript[5] *= 97 * 9 * 2;
 
-        if (matricula == "") {
+        if (matricula === "") {
             alert("Matrícula obrigatória!");
             document.getElementById("matricula").focus();
         }
@@ -21,7 +21,7 @@ $(document).ready(function () {
             alert("Matrícula incompleta!");
             document.getElementById("matricula").focus();
         }
-        else if (senha == "") {
+        else if (senha === "") {
             alert("Senha obrigatória!");
             document.getElementById("senha").focus();
         }
@@ -36,13 +36,13 @@ $(document).ready(function () {
             const isAdmin = firebase.database().ref().child('Alunos/' + matricula + '/admin');
             dbRefMat.once('value', snap => {
                 var dadoMatricula = snap.val();
-            if (dadoMatricula == matricula) {
+            if (dadoMatricula === matricula) {
                 dbRefSenha.once('value', snap => {
                     var dadoSenha = snap.val();
-                if (senha == dadoSenha && dadoSenha != null) {
+                if (senha === dadoSenha && dadoSenha !== null) {
                     isAdmin.once('value', snap => {
                         var dadoAdmin = snap.val();
-                        if (dadoAdmin == '0') {
+                        if (dadoAdmin === '0') {
                             location.href = "usuario_logado.html";
                         }
                         else{
