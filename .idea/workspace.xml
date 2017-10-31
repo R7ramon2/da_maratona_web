@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70026c55-8524-449f-9ffd-0d37db154726" name="Default" comment="Co">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin_login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cadastrar.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firebase_alterar_senha.js" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/firebase_alterar.js" afterPath="$PROJECT_DIR$/firebase_admin_login.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alterar_senha.html" afterPath="$PROJECT_DIR$/alterar_senha.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,11 +20,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="firebase_alterar_senha.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="firebase.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firebase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-765">
+              <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="firebase_alterar_senha.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/firebase_alterar_senha.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="51" column="16" lean-forward="false" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+            <state relative-caret-position="357">
+              <caret line="49" column="81" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="firebase_admin_login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firebase_admin_login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cadastrar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cadastrar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-357">
+              <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="58" column="29" lean-forward="false" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -49,9 +89,10 @@
         <option value="$PROJECT_DIR$/firebase_alterar.js" />
         <option value="$PROJECT_DIR$/alterar_senha.html" />
         <option value="$PROJECT_DIR$/admin_login.html" />
-        <option value="$PROJECT_DIR$/firebase_admin_login.js" />
-        <option value="$PROJECT_DIR$/firebase_alterar_senha.js" />
         <option value="$PROJECT_DIR$/firebase.js" />
+        <option value="$PROJECT_DIR$/firebase_alterar_senha.js" />
+        <option value="$PROJECT_DIR$/firebase_admin_login.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -107,7 +148,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin_login.html" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
@@ -150,7 +191,7 @@
       <updated>1509366544440</updated>
       <workItem from="1509366548220" duration="3651000" />
       <workItem from="1509416527494" duration="3319000" />
-      <workItem from="1509429366918" duration="7561000" />
+      <workItem from="1509429366918" duration="8976000" />
     </task>
     <task id="LOCAL-00001" summary="Alteração do campo &quot;Senha&quot; e &quot;Confirmação de senha&quot; para aceitar apenas números.">
       <created>1509430815639</created>
@@ -166,11 +207,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509436852128</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Melhoria de código na alteração de senha.">
+      <created>1509436950427</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1509436950427</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14531000" />
+    <option name="totallyTimeSpent" value="15946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -204,7 +252,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Alteração do campo &quot;Senha&quot; e &quot;Confirmação de senha&quot; para aceitar apenas números." />
     <MESSAGE value="Melhoria de código ao validar se matrícula já existe." />
-    <option name="LAST_COMMIT_MESSAGE" value="Melhoria de código ao validar se matrícula já existe." />
+    <MESSAGE value="Melhoria de código na alteração de senha." />
+    <option name="LAST_COMMIT_MESSAGE" value="Melhoria de código na alteração de senha." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -217,7 +266,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/firebase_admin_login.js</url>
-          <line>35</line>
+          <line>37</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -262,7 +311,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/cadastrar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="33" selection-end-column="13" />
@@ -286,7 +335,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/cadastrar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="33" selection-end-column="13" />
@@ -326,38 +375,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin_login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="30" column="45" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firebase_admin_login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="30" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firebase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alterar_senha.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -366,10 +383,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/firebase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765">
+          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/firebase_alterar_senha.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="51" column="16" lean-forward="false" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+        <state relative-caret-position="357">
+          <caret line="49" column="81" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firebase_admin_login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cadastrar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="58" column="29" lean-forward="false" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
           <folding />
         </state>
       </provider>

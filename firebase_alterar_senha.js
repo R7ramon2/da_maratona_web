@@ -48,9 +48,8 @@ $(document).ready(function () {
         else {
             senha = senhaCript.join("");
             firebase.database().ref().child('Alunos/' + matricula + '/matricula').on('value', snap => {
-                var dados = JSON.stringify(snap.val());
-            //dados tá trazendo null
-            if (matricula != dados && dados != "null") {
+                var dados = snap.val();
+            if (dados != null) {
                 firebase.database().ref().child('Alunos/' + matricula + '/senha').set(senha);
                 alert("Senha alterada com sucesso!");
                 document.getElementById('matricula').value = '';
