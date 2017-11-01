@@ -33,6 +33,7 @@
     <script>
         $(document).ready(function () {
             var feed = [];
+            var img;
             const dbRefMat = firebase.database().ref().child('Alunos').orderByChild('pontuacao');
             dbRefMat.on('value', function (snap) {
                 feed = [];
@@ -43,26 +44,35 @@
                 feed.reverse();
                 html = "";
                 tr = "<tr>";
-                for(i=0;i<feed.length;i++){
-                    if(i<=4){
+                for (i = 0; i < feed.length; i++) {
+                    if (i <= 4) {
                         tr = "<tr class = \"table-success\" > ";
                     }
-                    else if(i>=5 && i < 10){
+                    else if (i >= 5 && i < 10) {
                         tr = "<tr class = \"table-info\" > ";
                     }
-                    else if(i >= (feed.length - 4)){
+                    else if (i >= (feed.length - 4)) {
                         tr = "<tr class = \"table-danger\" > ";
                     }
-                    else{
+                    else {
                         tr = "<tr>";
                     }
-                    pos = i+1;
+                    /*Aqui é que da merda*/
+                    const imageRef = firebase.storage().ref().child('Fotos/' + feed[i]['imagem']);
+                    imageRef.getDownloadURL().then(function (url) {
+                        img = url;
+                        console.log(img);
+                    }).catch(function (error) {
+                        console.log("erro");
+                    });
+                    pos = i + 1;
                     html +=
                         tr +
-                        "<th scope=\"row\">"+ pos +"ª</th>\n" +
-                        "<td>"+ feed[i]['nome'] +"</td>\n" +
-                        "<td>"+ feed[i]['matricula'] +"</td>\n" +
-                        "<td>"+ feed[i]['pontuacao'] +"</td>\n" +
+                        "<th style=\"text-align:center\" scope=\"row\">" + pos + "ª</th>\n" +
+                        "<td style = \"font-size:20px\">" + feed[i]['nome'] + "</td>\n" +
+                        "<td>" + feed[i]['matricula'] + "</td>\n" +
+                        "<td>" + feed[i]['pontuacao'] + "</td>\n" +
+                        "<td><img width='50' src = \""+img+"\"></td>\n" +
                         "</tr>";
                 }
                 $("#corpo").html(html);
@@ -99,9 +109,10 @@
             <th scope="col">Nome</th>
             <th scope="col">Matricula</th>
             <th scope="col">Pontuação</th>
+            <th scope="col">Imagem</th>
         </tr>
         </thead>
-        <tbody id = "corpo">
+        <tbody id="corpo">
         </tbody>
     </table>
 </div>
