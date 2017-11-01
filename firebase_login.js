@@ -43,7 +43,7 @@ $(document).ready(function () {
                     isAdmin.once('value', snap => {
                         var dadoAdmin = snap.val();
                         if (dadoAdmin === '0') {
-                            location.href = "usuario_logado.html";
+                            location.href = "aluno_logado.html";
                         }
                         else{
                             location.href = "admin_logado.html";

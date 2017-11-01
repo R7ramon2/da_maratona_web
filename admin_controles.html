@@ -35,7 +35,7 @@
 
     <script type="text/javascript">
         function mudarTela(tela){
-            location.href = tela;
+            location.href = tela
         }
     </script>
 
@@ -46,16 +46,21 @@
     <div class="form-group row">
         <label for="matricula" class="col-xs-2 col-form-label">Matricula</label>
         <div class="col-xs-10">
-            <input class="form-control" type="text" placeholder="Matricula" id="matricula" maxlength="11" autocomplete="on">
+            <input class="form-control" placeholder="Matricula" id="matricula" maxlength="11" autocomplete="on">
         </div>
     </div>
     <div class="form-group row">
-        <label for="senha" class="col-xs-2 col-form-label">Senha</label>
+        <label for="pontos" class="col-xs-2 col-form-label">Pontos</label>
         <div class="col-xs-10">
-            <input class="form-control" type="password" placeholder="Senha" id="senha" maxlength="6" autocomplete="on">
+            <input class="form-control" placeholder="Pontos" id="pontos" maxlength="2" autocomplete="on">
         </div>
     </div>
-    <button type="submit" id="login" class="btn btn-primary">Login</button>
+    <button id="adicionar_pontos" class="btn btn-primary">Adicionar Pontos</button>
+    <button id="remover_pontos" class="btn btn-primary">Remover Pontos</button>
+    <button id="adicionar_faltas" class="btn btn-primary">Adicionar Faltas</button>
+    <button id="remover_faltas" class="btn btn-primary">Remover Faltas</button>
+    <button id="adicionar_periodo" class="btn btn-primary">Adicionar Período</button>
+    <button id="cadastrar_usuario" class="btn btn-primary" onClick="mudarTela('cadastrar.html')">Cadastrar Usuário</button>
 </div>
 
 </body>
