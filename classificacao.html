@@ -42,10 +42,23 @@
                 feed.reverse();
                 console.log(feed);
                 html = "";
+                tr = "<tr>";
                 for(i=0;i<feed.length;i++){
+                    if(i<4){
+                        tr = "<tr class = \"table-success\" > ";
+                    }
+                    else if(i>=4 && i < 10){
+                        tr = "<tr class = \"table-info\" > ";
+                    }
+                    else if(i >= (feed.length - 4)){
+                        tr = "<tr class = \"table-danger\" > ";
+                    }
+                    else{
+                        tr = "<tr>";
+                    }
                     pos = i+1;
-                    html += "" +
-                        "<tr>\n" +
+                    html +=
+                        tr +
                         "<th scope=\"row\">"+ pos +"ª</th>\n" +
                         "<td>"+ feed[i]['nome'] +"</td>\n" +
                         "<td>"+ feed[i]['matricula'] +"</td>\n" +
@@ -79,7 +92,7 @@
 </head>
 <body>
 <div class="main">
-    <table class="table table-hover table-dark">
+    <table class="table table-bordered">
         <thead>
         <tr>
             <th scope="col">Pos</th>
