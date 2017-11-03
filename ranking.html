@@ -16,6 +16,7 @@
             crossorigin="anonymous"></script>
 
     <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+
     <script>
         // Initialize Firebase
         var config = {
@@ -30,10 +31,45 @@
     </script>
 
 
+    <style>
+
+        .main {
+            margin-top: 7%;
+            margin-left: 8%;
+            margin-right: 8%;
+            border-radius: initial;
+            border-style: solid;
+            border-color: white;
+        }
+
+        .titulo {
+            color: white;
+        }
+
+        .posicao{
+            text-align:center;
+        }
+        .aluno{
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .matricula{
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .pontuacao{
+            font-size: 20px;
+            text-align: center;
+        }
+
+    </style>
+
+
     <script>
         $(document).ready(function () {
             var feed = [];
-            var img;
             const dbRefMat = firebase.database().ref().child('Alunos').orderByChild('pontuacao');
             dbRefMat.on('value', function (snap) {
                 feed = [];
@@ -57,22 +93,14 @@
                     else {
                         tr = "<tr>";
                     }
-                    /*Aqui é que da merda*/
-                    const imageRef = firebase.storage().ref().child('Fotos/' + feed[i]['imagem']);
-                    imageRef.getDownloadURL().then(function (url) {
-                        img = url;
-                        console.log(img);
-                    }).catch(function (error) {
-                        console.log("erro");
-                    });
+                    img = 1;
                     pos = i + 1;
                     html +=
                         tr +
-                        "<th style=\"text-align:center\" scope=\"row\">" + pos + "ª</th>\n" +
-                        "<td style = \"font-size:20px\">" + feed[i]['nome'] + "</td>\n" +
-                        "<td>" + feed[i]['matricula'] + "</td>\n" +
-                        "<td>" + feed[i]['pontuacao'] + "</td>\n" +
-                        "<td><img width='50' src = \""+img+"\"></td>\n" +
+                        "<th class=\"posicao\" scope=\"row\">" + pos + "ª</th>\n" +
+                        "<td class = \"aluno\">" + feed[i]['nome'] + "</td>\n" +
+                        "<td class = \"matricula\">" + feed[i]['matricula'] + "</td>\n" +
+                        "<td class = \"pontuacao\">" + feed[i]['pontuacao'] + "</td>\n" +
                         "</tr>";
                 }
                 $("#corpo").html(html);
@@ -82,34 +110,16 @@
         });
     </script>
 
-    <style>
-
-        .main {
-            margin-top: 7%;
-            margin-left: 8%;
-            margin-right: 8%;
-            border-radius: initial;
-            border-style: solid;
-            border-color: white;
-        }
-
-        .titulo {
-            color: white;
-        }
-
-    </style>
-
 </head>
 <body>
 <div class="main">
     <table class="table table-bordered">
         <thead>
-        <tr>
+        <tr style = "text-align: center">
             <th scope="col">Pos</th>
             <th scope="col">Nome</th>
             <th scope="col">Matricula</th>
             <th scope="col">Pontuação</th>
-            <th scope="col">Imagem</th>
         </tr>
         </thead>
         <tbody id="corpo">
