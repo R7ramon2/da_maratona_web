@@ -46,20 +46,21 @@
             color: white;
         }
 
-        .posicao{
-            text-align:center;
+        .posicao {
+            text-align: center;
         }
-        .aluno{
+
+        .aluno {
             font-size: 20px;
             text-align: center;
         }
 
-        .matricula{
+        .matricula {
             font-size: 20px;
             text-align: center;
         }
 
-        .pontuacao{
+        .pontuacao {
             font-size: 20px;
             text-align: center;
         }
@@ -93,7 +94,13 @@
                     else {
                         tr = "<tr>";
                     }
-                    img = 1;
+                    img = feed[i]['imagemURL'];
+                    if(img == undefined) {
+                        img = "https://firebasestorage.googleapis.com/v0/b/da-maratona.appspot.com/o/Fotos%2F0?alt=media&token=308048ca-d07c-4ce9-9cbb-c806e19ed1c4";
+                    }
+                    else{
+                        img = feed[i]['imagemURL'];
+                    }
                     pos = i + 1;
                     html +=
                         tr +
@@ -101,6 +108,7 @@
                         "<td class = \"aluno\">" + feed[i]['nome'] + "</td>\n" +
                         "<td class = \"matricula\">" + feed[i]['matricula'] + "</td>\n" +
                         "<td class = \"pontuacao\">" + feed[i]['pontuacao'] + "</td>\n" +
+                        "<td class = \"pontuacao\"> <img src = \"" + img + "\" width=\"50\" ></td>\n" +
                         "</tr>";
                 }
                 $("#corpo").html(html);
@@ -115,11 +123,12 @@
 <div class="main">
     <table class="table table-bordered">
         <thead>
-        <tr style = "text-align: center">
+        <tr style="text-align: center">
             <th scope="col">Pos</th>
             <th scope="col">Nome</th>
             <th scope="col">Matricula</th>
             <th scope="col">Pontuação</th>
+            <th scope="col">Imagem</th>
         </tr>
         </thead>
         <tbody id="corpo">
