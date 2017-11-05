@@ -29,7 +29,7 @@
             });
         }
 
-        firebase.database().ref().on('value', snap => {
+        firebase.database().ref().once('value', snap => {
             var dados = JSON.stringify(snap.val());
             alert(dados);
             enviarJson(dados);
