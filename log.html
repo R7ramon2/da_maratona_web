@@ -35,21 +35,13 @@
     <script>
 
         $(document).ready(function () {
-
-            firebase.database().ref().child('log').once('value', snap => {
-//                var dados = JSON.stringify(snap.val());
-                var dados = snap.key;
-                alert(dados);
-            });
-
             const dbRefMat = firebase.database().ref().child('log');
             dbRefMat.on('value', function (snap) {
-                feed = [];
+                pessoas = [];
                 snap.forEach(function (child) {
-                    var data = child.val();
-                    feed.push(data);
-                    console.log(feed);
+                    pessoas.push(child.key);
                 });
+                console.log(pessoas);
             });
         });
 
@@ -82,7 +74,8 @@
         </thead>
         <tbody id="corpo">
         <tr>
-            <th class="log_pai" scope="row"><img style="cursor: pointer" width="30" src="imagens/add.png"> Adicionar Faltas </th>
+            <th class="log_pai" id="adicionarFaltas" scope="row"><img style="cursor: pointer" width="30" src="imagens/add.png"> Adicionar Faltas
+            </th>
         </tr>
         <tr>
             <th class="log_pai" scope="row"><img style="cursor: pointer" width="30" src="imagens/add.png"> Adicionar Imagens </th>
