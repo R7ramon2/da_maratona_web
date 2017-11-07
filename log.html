@@ -41,6 +41,10 @@
                 snap.forEach(function (child) {
                     pessoas.push(child.key);
                 });
+                for(i=0;i<pessoas.length;i++){
+                    $("#corpo").append("<tr>\n" +
+                        "<th class=\"log_pai\" id=\""+pessoas[i]+"\" scope=\"row\"><img style=\"cursor: pointer\" width=\"30\" src=\"imagens/add.png\">"+ pessoas[i] +"</th> </tr>");
+                }
                 console.log(pessoas);
             });
         });
@@ -73,7 +77,7 @@
         </tr>
         </thead>
         <tbody id="corpo">
-        <tr>
+        <!--<tr>
             <th class="log_pai" id="adicionarFaltas" scope="row"><img style="cursor: pointer" width="30" src="imagens/add.png"> Adicionar Faltas
             </th>
         </tr>
@@ -91,7 +95,7 @@
         </tr>
         <tr>
             <th class="log_pai" scope="row"><img style="cursor: pointer" width="30" src="imagens/add.png"> Remover Pontos </th>
-        </tr>
+        </tr> -->
     </table>
 </div>
 </body>
