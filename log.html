@@ -34,17 +34,29 @@
 
     <script>
 
+        var tipoLog = [];
+        var pessoas = [];
+        var horario = [];
         $(document).ready(function () {
             const dbRefMat = firebase.database().ref().child('log');
             dbRefMat.on('value', function (snap) {
+                tipoLog = [];
                 pessoas = [];
+                horario = [];
                 snap.forEach(function (child) {
-                    pessoas.push(child.key);
+                    tipoLog.push(child.key);
+                    child.forEach(function (child) {
+                       pessoas.push(child.key);
+                    });
+
                 });
-                for(i=0;i<pessoas.length;i++){
-                    $("#corpo").append("<tr>\n" +
-                        "<th class=\"log_pai\" id=\""+pessoas[i]+"\" scope=\"row\"><img style=\"cursor: pointer\" width=\"30\" src=\"imagens/add.png\">"+ pessoas[i] +"</th> </tr>");
+                for(i=0; i<tipoLog.length; i++){
+                    $("#corpo").append("<tr id = \""+tipoLog[i] +"\">\n" +
+                        "<th class=\"log_pai\" scope=\"row\"><img style=\"cursor: pointer\" width=\"30\" src=\"imagens/add.png\">"+ tipoLog[i] +"</th> </tr>");
+                    
                 }
+                console.log()
+                console.log(tipoLog);
                 console.log(pessoas);
             });
         });
@@ -77,25 +89,6 @@
         </tr>
         </thead>
         <tbody id="corpo">
-        <!--<tr>
-            <th class="log_pai" id="adicionarFaltas" scope="row"><img style="cursor: pointer" width="30" src="imagens/add.png"> Adicionar Faltas
-            </th>
-        </tr>
-        <tr>
-            <th class="log_pai" scope="row"><img style="cursor: pointer" width="30" src="imagens/add.png"> Adicionar Imagens </th>
-        </tr>
-        <tr>
-            <th class="log_pai" scope="row"><img style="cursor: pointer" width="30" src="imagens/add.png"> Adicionar Período </th>
-        </tr>
-        <tr>
-            <th class="log_pai" scope="row"><img style="cursor: pointer" width="30" src="imagens/add.png"> Adicionar Pontos </th>
-        </tr>
-        <tr>
-            <th class="log_pai" scope="row"><img style="cursor: pointer" width="30" src="imagens/add.png"> Remover Faltas </th>
-        </tr>
-        <tr>
-            <th class="log_pai" scope="row"><img style="cursor: pointer" width="30" src="imagens/add.png"> Remover Pontos </th>
-        </tr> -->
     </table>
 </div>
 </body>
