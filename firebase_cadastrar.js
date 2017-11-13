@@ -24,6 +24,7 @@ $(document).ready(function () {
         faltas = 0;
         imagem = "0";
         pontuacao = 0;
+        verificado = false;
         nome_completo = nome.split(" ");
         primeiro_nome = nome_completo[0];
         ultimo_nome = nome_completo[nome_completo.length - 1];
@@ -76,6 +77,7 @@ $(document).ready(function () {
                         faltas: faltas,
                         imagem: imagem,
                         pontuacao: pontuacao,
+                        verificado: verificado,
                         primeiroNome: primeiro_nome,
                         ultimoNome: ultimo_nome
                     });
