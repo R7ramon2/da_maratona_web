@@ -1,6 +1,6 @@
-$matricula = [matricula];
-$digito = [digito];
-$senha = [senha];
+$matricula = "";
+$digito = "";
+$senha = "";
 
 
 $content = http_build_query(array(
