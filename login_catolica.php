@@ -1,3 +1,5 @@
+<?php
+
 $matricula = "";
 $digito = "";
 $senha = "";
@@ -49,3 +51,5 @@ if(strlen($verificador) == 148){
 else{
 	echo "Não foi possível efetuar o login";
 }
+
+?>
