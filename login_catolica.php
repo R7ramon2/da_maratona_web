@@ -1,23 +1,24 @@
 <?php
 
-$matricula = "";
-$digito = "";
-$senha = "";
+error_reporting(E_ERROR | E_PARSE);
+$matricula = "201520474";
+$digito = "0";
+$senha = "196722";
 
 
 $content = http_build_query(array(
 	'rotina' => '1',
-    'Matricula' => $matricula,
-    'Digito' => $digito,
-    'Senha' => $senha,
+	'Matricula' => $matricula,
+	'Digito' => $digito,
+	'Senha' => $senha,
 ));
 
 $context = stream_context_create(array(
-    'http' => array(
-        'method'  => 'POST',
+	'http' => array(
+		'method'  => 'POST',
 		'header'  => 'Content-type: application/x-www-form-urlencoded',
-        'content' => $content,
-    )
+		'content' => $content,
+	)
 ));
   
 $result = file_get_contents('http://www.unicap.br/PortalGraduacao/AlunoGraduacao;jsessionid=D449FC6E80C58ED1C8B0D15740F96324', null, $context);
@@ -26,30 +27,38 @@ $result = file_get_contents('http://www.unicap.br/PortalGraduacao/AlunoGraduacao
 //var_dump($result);
 
 $nome = explode('<div class="container info-aluno">',$result);
-
-$nome = $nome[1];
+if(!empty($nome[1])){
+	$nome = $nome[1];
+}
 
 $nome = explode('<div class="mensagem-inicial">',$nome);
-$nome = $nome[0];
+if(!empty($nome[0])){
+	$nome = $nome[0];
+}
 
 
 $test = explode('<div class="mensagem-inicial">',$result);
 
-$test = $test[1];
+if(!empty($test[1])){
+	$test = $test[1];
+}
 
 
 $verificador = explode(".",$test);
 
-$verificador = $verificador[0];
+if(!empty($verificador[0])){
+	$verificador = $verificador[0];
+	$qtdString = strlen($verificador);
+}
+else{
+	$qtdString = 0;
+}
 
-
-
-if(strlen($verificador) == 148){
+if($qtdString == 148){
 	echo "Usuário logado com sucesso<br />";
 	echo $nome;
 }
 else{
 	echo "Não foi possível efetuar o login";
 }
-
 ?>
