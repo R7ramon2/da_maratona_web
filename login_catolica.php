@@ -1,9 +1,9 @@
 <?php
 
 error_reporting(E_ERROR | E_PARSE);
-$matricula = "201520474";
-$digito = "0";
-$senha = "196722";
+$matricula = "----";
+$digito = "-";
+$senha = "------";
 
 
 $content = http_build_query(array(
