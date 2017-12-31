@@ -2,7 +2,7 @@
 
 /*
  * Retornos de erros   -- Ramon Ranieri e Tiago Emerencino
- * -1 --> erro de internet
+ * -1 --> erro de internet e ou no servidor
  *  0 --> erro ao logar (dados vazios ou todos incorretos)
  *  1 --> sucesso ao logar
  *  2 --> erro de matricula
