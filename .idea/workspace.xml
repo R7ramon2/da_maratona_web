@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70026c55-8524-449f-9ffd-0d37db154726" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/login_catolica.php" afterPath="$PROJECT_DIR$/login_catolica.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,6 +45,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Ramon Ranieri &lt;ramonranieri@hotmail.com&gt;" />
         <option value="Tiagoemerenciano &lt;emerenciano.tiago@gmail.com&gt;" />
       </list>
     </option>
@@ -215,7 +214,7 @@
       <workItem from="1513075529639" duration="33000" />
       <workItem from="1514661201234" duration="12000" />
       <workItem from="1514661217079" duration="5422000" />
-      <workItem from="1514747380547" duration="5486000" />
+      <workItem from="1514747380547" duration="5565000" />
     </task>
     <task id="LOCAL-00001" summary="Alteração do campo &quot;Senha&quot; e &quot;Confirmação de senha&quot; para aceitar apenas números.">
       <created>1509430815639</created>
@@ -266,11 +265,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509472832307</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Correção na verificação do login da católica">
+      <created>1514759722804</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1514759722804</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55995000" />
+    <option name="totallyTimeSpent" value="56074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -311,7 +317,8 @@
     <MESSAGE value="Melhorado processo de login e nova tela pós-login." />
     <MESSAGE value="Implementação de login diferenciado (administrador ou aluno).&#10;Melhorias de código." />
     <MESSAGE value="Melhorias de código para segurança nas telas de alterar senha, cadastrar usuário e login." />
-    <option name="LAST_COMMIT_MESSAGE" value="Melhorias de código para segurança nas telas de alterar senha, cadastrar usuário e login." />
+    <MESSAGE value="Correção na verificação do login da católica" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correção na verificação do login da católica" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
