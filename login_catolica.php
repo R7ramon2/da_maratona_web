@@ -77,7 +77,9 @@ if ($cond) {
 
         ));
 
-        $result = file_get_contents('http://www.unicap.br/PortalGraduacao/AlunoGraduacao;jsessionid=D449FC6E80C58ED1C8B0D15740F96324', null, $context);
+        $url = "http://www.unicap.br/PortalGraduacao/AlunoGraduacao;jsessionid=D449FC6E80C58ED1C8B0D15740F96324";
+        $url = preg_replace("/ /", "%20", $url);
+        $result = file_get_contents($url, null, $context);
 
         /*Recuperar matricula, senha e nome*/
         $nome = explode('<div class="container info-aluno">', $result);

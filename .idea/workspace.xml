@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="70026c55-8524-449f-9ffd-0d37db154726" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/login_catolica.php" afterPath="$PROJECT_DIR$/login_catolica.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,10 +20,12 @@
       <file leaf-file-name="login_catolica.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login_catolica.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="118" column="47" lean-forward="true" selection-start-line="118" selection-start-column="47" selection-end-line="118" selection-end-column="47" />
+            <state relative-caret-position="255">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#7#278#0#PHP" expanded="true" />
+                <marker date="1514760191453" expanded="true" signature="2428:3059" ph="..." />
+                <marker date="1514760191453" expanded="true" signature="2599:3059" ph="..." />
               </folding>
             </state>
           </provider>
@@ -214,7 +217,7 @@
       <workItem from="1513075529639" duration="33000" />
       <workItem from="1514661201234" duration="12000" />
       <workItem from="1514661217079" duration="5422000" />
-      <workItem from="1514747380547" duration="5572000" />
+      <workItem from="1514747380547" duration="6321000" />
     </task>
     <task id="LOCAL-00001" summary="Alteração do campo &quot;Senha&quot; e &quot;Confirmação de senha&quot; para aceitar apenas números.">
       <created>1509430815639</created>
@@ -279,17 +282,24 @@
       <option name="project" value="LOCAL" />
       <updated>1514759755238</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Correção na verificação do login da católica">
+      <created>1514759761948</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1514759761948</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56081000" />
+    <option name="totallyTimeSpent" value="56830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42997813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42963752" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -524,10 +534,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login_catolica.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="118" column="47" lean-forward="true" selection-start-line="118" selection-start-column="47" selection-end-line="118" selection-end-column="47" />
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#7#278#0#PHP" expanded="true" />
+            <marker date="1514760191453" expanded="true" signature="2428:3059" ph="..." />
+            <marker date="1514760191453" expanded="true" signature="2599:3059" ph="..." />
           </folding>
         </state>
       </provider>
