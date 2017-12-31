@@ -214,7 +214,7 @@
       <workItem from="1513075529639" duration="33000" />
       <workItem from="1514661201234" duration="12000" />
       <workItem from="1514661217079" duration="5422000" />
-      <workItem from="1514747380547" duration="5565000" />
+      <workItem from="1514747380547" duration="5572000" />
     </task>
     <task id="LOCAL-00001" summary="Alteração do campo &quot;Senha&quot; e &quot;Confirmação de senha&quot; para aceitar apenas números.">
       <created>1509430815639</created>
@@ -272,11 +272,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514759722804</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Correção na verificação do login da católica">
+      <created>1514759755238</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1514759755238</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56074000" />
+    <option name="totallyTimeSpent" value="56081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
